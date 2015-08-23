@@ -1,0 +1,634 @@
+スクリプトは 2015年08月23日 23時52分28秒
+ に開始しました]0;oracle@std:~/prj[?1034h[oracle@std prj]$ ./run.sh
+
+SQL*Plus: Release 11.2.0.3.0 Production on 日 8月 23 23:52:31 2015
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+
+日 8月  23                                                                          ページ    1
+					  DBA_TABLESPACES
+                                       自動セグメント領域管理
+                                      （ASS Management）の確認
+
+                               自動
+                               セグメント
+tablespace                     領域管理
+------------------------------ --------------------
+SYSAUX			       AUTO
+SYSTEM			       MANUAL
+TEMP			       MANUAL
+UNDOTBS1		       MANUAL
+USERS			       AUTO
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing optionsとの接続が切断されました。
+
+SQL*Plus: Release 11.2.0.3.0 Production on 日 8月 23 23:52:31 2015
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+
+日 8月  23                                                                          ページ    1
+					   DBA_DATA_FILES
+                                              自動拡張
+
+tablespace filename                                                               自動拡張
+---------- ---------------------------------------------------------------------- ----------
+USERS	   /u01/app/oracle/oradata/db11g/users01.dbf				  YES
+UNDOTBS1   /u01/app/oracle/oradata/db11g/undotbs01.dbf				  YES
+SYSAUX	   /u01/app/oracle/oradata/db11g/sysaux01.dbf				  YES
+SYSTEM	   /u01/app/oracle/oradata/db11g/system01.dbf				  YES
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing optionsとの接続が切断されました。
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,512		 6,528		     99.1
+UNDOTBS1	      87,040		   77,120		 9,920		     88.6
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+1-1000
+
+  COUNT(*)
+----------
+      1000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,384		 6,656		    99.08
+UNDOTBS1	      87,040		   77,120		 9,920		     88.6
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+1001-2000
+
+  COUNT(*)
+----------
+      2000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,448		 6,592		    99.09
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+2001-3000
+
+  COUNT(*)
+----------
+      3000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,512		 6,528		     99.1
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+3001-4000
+
+  COUNT(*)
+----------
+      4000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,512		 6,528		     99.1
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+4001-5000
+
+  COUNT(*)
+----------
+      5000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,576		 6,464		    99.11
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+5001-6000
+
+  COUNT(*)
+----------
+      6000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,576		 6,464		    99.11
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+6001-7000
+
+  COUNT(*)
+----------
+      7000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,640		 6,400		    99.12
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+7001-8000
+
+  COUNT(*)
+----------
+      8000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,704		 6,336		    99.13
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?^C
+]0;oracle@std:~/prj[oracle@std prj]$ 
+]0;oracle@std:~/prj[oracle@std prj]$ 
+]0;oracle@std:~/prj[oracle@std prj]$ ./run.sh[4Pexit./run.shv./run.shi./run.sh ./run.sh
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"./run.sh" 36L, 756C[>c[1;1H[36mSTART[m=[31m1[m
+[36mEND[m=[35m$((${START} + [m[31m999[m[35m))[m
+
+[36mOK[m=[33m""
+while [[m [33m"[m[35m$OK[m[33m"[m [33m=[m [31m""[m [33m]; do
+[m  [33mecho[m[31m [m[33m"[m[35m$START[m[31m-[m[35m$END[m[33m"[m
+  ./mak.ins.sh [35m$START[m [35m$END[m [33m>[m insert.sql
+
+  sqlplus [33m-S[m [35m${[m[30m[43mUSERPASS[m[35m}[m @ insert.sql [33m>[m /dev/null
+  [36mRC[m=[35m$?[m
+  [33mif [[m [33m"[m[35m${RC[m[33m:?[m[35m}[m[33m"[m [33m-ne[m [33m"[m[31m0[m[33m"[m [33m][m; [33mthen
+[m    [33mecho[m[31m [m[33m"[m[31minsert.sql fail.[m[33m"[m[31m 1[m[33m>[m&[31m2[m
+    [33mexit[m [31m1[m
+  [33mfi[m
+  sqlplus [33m-S[m [35m${[m[30m[43mUSERPASS[m[33m:?[m[35m}[m @ cnt.tbl_dummy.sql
+  ./get-disk-usage-2.sh [33m"[m[35m${SYS[m[33m:?[m[35m}[m[33m"[m
+  ./mak.ls.data_files.sh [33m"[m[35m${SYS[m[33m:?[m[35m}[m[33m"[m
+
+  [36mSTART[m=[35m$((${END} + [m[31m1[m[35m))[m
+  [36mEND[m=[35m$((${START} + [m[31m999[m[35m))[m
+  [33mecho[m[31m -n [m[33m"[m[31mOK?[m[33m"
+[m  [33mread[m OK
+[33mdone[m[24;101H36,1[9C末尾[23;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;102H5[22;1H[?12l[?25h[?25l[24;102H4[21;1H[?12l[?25h[?25l[24;102H3[20;1H[?12l[?25h[?25l[24;102H2[19;1H[?12l[?25h[?25l[24;102H1,0-1[18;1H[?12l[?25h[?25l[24;102H0,1  [17;1H[?12l[?25h[?25l[24;101H29[16;1H[?12l[?25h[?25l[24;102H8[15;1H[?12l[?25h[?25l[24;102H7[14;1H[?12l[?25h[?25l[24;102H6[13;1H[?12l[?25h[?25l[24;102H5[12;1H[?12l[?25h[?25l[24;102H4[11;1H[?12l[?25h[?25l[24;102H3[10;1H[?12l[?25h[?25l[24;102H2[9;1H[?12l[?25h[?25l[24;102H1,0-1[8;1H[?12l[?25h[?25l[24;102H0,1  [7;1H[?12l[?25h[?25l[24;101H19[6;1H[?12l[?25h[?25l[24;102H8[5;1H[?12l[?25h[?25l[24;102H7[4;1H[?12l[?25h[?25l[24;102H6,0-1[3;1H[?12l[?25h[?25l[24;102H5,1  [2;1H[?12l[?25h[?25l[24;104H2[2;2H[?12l[?25h[?25l[24;104H3[2;3H[?12l[?25h[?25l[24;104H4[2;4H[?12l[?25h[?25l[24;104H5[2;5H[?12l[?25h[?25l[1C[35m[46m([16C)[m[24;104H6[2;6H[?12l[?25h[?25l[35m([m[35m[46m([14C)[m[35m)[m[24;104H7[2;7H[?12l[?25h[?25l[35m([14C)[m[24;104H8[2;8H[?12l[?25h[?25l[1C[35m[46m{[5C}[m[24;104H9[2;9H[?12l[?25h[?25l[35m{START}[m[24;104H10[2;10H[?12l[?25h[?25l[24;105H1[2;11H[?12l[?25h[?25l[24;105H2[2;12H[?12l[?25h[?25l[24;105H3[2;13H[?12l[?25h[?25l[24;105H4[2;14H[?12l[?25h[?25l[35m[46m{[5C}[m[24;105H5[2;15H[?12l[?25h[?25l[35m{START}[m[24;105H6[2;16H[?12l[?25h[?25l[24;105H7[2;17H[?12l[?25h[?25l[24;105H8[2;18H[?12l[?25h[?25l[24;105H9[2;19H[?12l[?25h[?25l[24;104H20[2;20H[?12l[?25h[?25l[24;1H[1m-- 挿入 --[m[24;12H[K[24;101H15,20[8C末尾[2;20H[?12l[?25h[?25l[2C[31m9[m[1C[35m)[m[24;105H1[2;21H[?12l[?25h[24;1H[K[2;20H[?25l[24;101H15,20[8C末尾[2;20H[?12l[?25h[?25l[24;102H6,0-1[3;1H[?12l[?25h[?25l[24;102H7,5  [4;5H[?12l[?25h[?25l[5;7H[33m[46m[[12C][m[24;102H8,20[5;20H[?12l[?25h[?25l[5;7H[33m[[12C][m[24;102H9[6;20H[?12l[?25h[?25l[24;101H20[7;20H[?12l[?25h[?25l[24;102H1,0-1[8;1H[?12l[?25h[?25l[24;102H2,20 [9;20H[?12l[?25h[?25l[24;102H3,7 [10;7H[?12l[?25h[?25l[24;102H4,20[11;20H[?12l[?25h[?25l[24;102H5[12;20H[?12l[?25h[?25l[24;102H6,1[13;10H[?12l[?25h[?25l[24;102H7,4 [14;4H[?12l[?25h[?25l[24;102H8,20[15;20H[?12l[?25h[?25l[24;102H9[16;20H[?12l[?25h[?25l[24;101H30[17;20H[?12l[?25h[?25l[24;102H1,0-1[18;1H[?12l[?25h[?25l[24;102H2,20 [19;20H[?12l[?25h[?25l[24;102H3[20;20H[?12l[?25h[?25l[24;105H1[20;21H[?12l[?25h[?25l[24;1H[1m-- 挿入 --[m[24;101H[K[24;101H33,21[8C末尾[20;21H[?12l[?25h[?25l[3C[31m9[m[1C[35m)[m[24;105H2[20;22H[?12l[?25h[24;1H[K[20;21H[?25l[24;101H33,21[8C末尾[20;21H[?12l[?25h[?25l[24;101H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"./run.sh" 36L, 758C 書込み
+[?1l>[?12l[?25h[?1049l]0;oracle@std:~/prj[oracle@std prj]$ ./run.sh 
+
+SQL*Plus: Release 11.2.0.3.0 Production on 日 8月 23 23:53:16 2015
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+
+日 8月  23                                                                          ページ    1
+					  DBA_TABLESPACES
+                                       自動セグメント領域管理
+                                      （ASS Management）の確認
+
+                               自動
+                               セグメント
+tablespace                     領域管理
+------------------------------ --------------------
+SYSAUX			       AUTO
+SYSTEM			       MANUAL
+TEMP			       MANUAL
+UNDOTBS1		       MANUAL
+USERS			       AUTO
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing optionsとの接続が切断されました。
+
+SQL*Plus: Release 11.2.0.3.0 Production on 日 8月 23 23:53:16 2015
+
+Copyright (c) 1982, 2011, Oracle.  All rights reserved.
+
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+
+日 8月  23                                                                          ページ    1
+					   DBA_DATA_FILES
+                                              自動拡張
+
+tablespace filename                                                               自動拡張
+---------- ---------------------------------------------------------------------- ----------
+USERS	   /u01/app/oracle/oradata/db11g/users01.dbf				  YES
+UNDOTBS1   /u01/app/oracle/oradata/db11g/undotbs01.dbf				  YES
+SYSAUX	   /u01/app/oracle/oradata/db11g/sysaux01.dbf				  YES
+SYSTEM	   /u01/app/oracle/oradata/db11g/system01.dbf				  YES
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.3.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing optionsとの接続が切断されました。
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,704		 6,336		    99.13
+UNDOTBS1	      87,040		   27,648		59,392		    31.76
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:52 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+1-10000
+
+  COUNT(*)
+----------
+     10000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  720,768		 6,272		    99.14
+UNDOTBS1	      87,040		   27,520		59,520		    31.62
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+10001-20000
+
+  COUNT(*)
+----------
+     20000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  721,152		 5,888		    99.19
+UNDOTBS1	      87,040		   27,520		59,520		    31.62
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+20001-30000
+
+  COUNT(*)
+----------
+     30000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  722,368		 4,672		    99.36
+UNDOTBS1	      87,040		   28,544		58,496		    32.79
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+30001-40000
+
+  COUNT(*)
+----------
+     40000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  722,368		 4,672		    99.36
+UNDOTBS1	      87,040		   28,544		58,496		    32.79
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+40001-50000
+
+  COUNT(*)
+----------
+     50000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  723,392		 3,648		     99.5
+UNDOTBS1	      87,040		   26,368		60,672		    30.29
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:53 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:54 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+50001-60000
+
+  COUNT(*)
+----------
+     60000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  723,392		 3,648		     99.5
+UNDOTBS1	      87,040		   25,920		61,120		    29.78
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:57 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:55 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:56 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+60001-70000
+
+  COUNT(*)
+----------
+     70000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  723,392		 3,648		     99.5
+UNDOTBS1	      87,040		   21,184		65,856		    24.34
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:57 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:55 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+70001-80000
+
+  COUNT(*)
+----------
+     80000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  724,416		 2,624		    99.64
+UNDOTBS1	      87,040		   20,544		66,496		     23.6
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:57 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+80001-90000
+
+  COUNT(*)
+----------
+     90000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  724,416		 2,624		    99.64
+UNDOTBS1	      87,040		   21,568		65,472		    24.78
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+90001-100000
+
+  COUNT(*)
+----------
+    100000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  724,416		 2,624		    99.64
+UNDOTBS1	      87,040		   22,144		64,896		    25.44
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+100001-110000
+
+  COUNT(*)
+----------
+    110000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  725,440		 1,600		    99.78
+UNDOTBS1	      87,040		   22,144		64,896		    25.44
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+110001-120000
+
+  COUNT(*)
+----------
+    120000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  545,344		28,096		     95.1
+SYSTEM		     727,040		  725,440		 1,600		    99.78
+UNDOTBS1	      87,040		   23,168		63,872		    26.62
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 23 23:58 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:50 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+120001-130000
+
+  COUNT(*)
+----------
+    130000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  546,240		27,200		    95.26
+SYSTEM		     727,040		  726,464		   576		    99.92
+UNDOTBS1	      87,040		   25,408		61,632		    29.19
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+130001-140000
+
+  COUNT(*)
+----------
+    140000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  546,240		27,200		    95.26
+SYSTEM		     727,040		  726,464		   576		    99.92
+UNDOTBS1	      87,040		   26,432		60,608		    30.37
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+140001-150000
+
+  COUNT(*)
+----------
+    150000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  546,240		27,200		    95.26
+SYSTEM		     727,040		  726,464		   576		    99.92
+UNDOTBS1	      87,040		   26,432		60,608		    30.37
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 744497152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 24 00:00 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK?
+150001-160000
+
+  COUNT(*)
+----------
+    160000
+
+
+TABLESPACE_NAME size(KB)	     used(KB)		  free(KB)		  rate(%)
+--------------- -------------------- -------------------- -------------------- ----------
+SYSAUX		     573,440		  546,240		27,200		    95.26
+SYSTEM		     737,280		  727,488		 9,792		    98.67
+UNDOTBS1	      87,040		   26,432		60,608		    30.37
+USERS		       5,120		    1,344		 3,776		    26.25
+
+-rw-r-----. 1 oracle oinstall 587210752  8月 24 00:01 2015 /u01/app/oracle/oradata/db11g/sysaux01.dbf
+-rw-r-----. 1 oracle oinstall 754982912  8月 24 00:01 2015 /u01/app/oracle/oradata/db11g/system01.dbf
+-rw-r-----. 1 oracle oinstall 89137152  8月 24 00:01 2015 /u01/app/oracle/oradata/db11g/undotbs01.dbf
+-rw-r-----. 1 oracle oinstall 5251072  8月 23 23:59 2015 /u01/app/oracle/oradata/db11g/users01.dbf
+OK? ^C
+]0;oracle@std:~/prj[oracle@std prj]$ ls -l
+合計 1016
+-rw-r--r--. 1 oracle oinstall     81  8月 23 23:44 2015 cnt.tbl_dummy.sql
+-rw-r--r--. 1 oracle oinstall    272  8月 23 23:49 2015 crt.tbl_dummy.sql
+-rwxr-xr-x. 1 oracle oinstall   1452  8月 23 23:29 2015 [0m[01;32mget-disk-usage-2.sh[0m
+-rwxr-xr-x. 1 oracle oinstall   1559  8月 23 22:41 2015 [01;32mget-disk-usage.sh[0m
+-rw-r--r--. 1 oracle oinstall 960056  8月 24 00:01 2015 insert.sql
+-rwxr-xr-x. 1 oracle oinstall    358  8月 23 23:34 2015 [01;32mmak.ins.sh[0m
+-rwxr-xr-x. 1 oracle oinstall    224  8月 23 23:41 2015 [01;32mmak.ls.data_files.sh[0m
+-rw-r--r--. 1 oracle oinstall  28672  8月 24 00:00 2015 run.log
+-rwxr-xr-x. 1 oracle oinstall    758  8月 23 23:53 2015 [01;32mrun.sh[0m
+-rw-r--r--. 1 oracle oinstall    542  8月 23 01:38 2015 slt.coldbackup-files-01.sql
+-rw-r--r--. 1 oracle oinstall    340  8月 23 23:16 2015 slt.data_files-01.sql
+-rw-r--r--. 1 oracle oinstall    420  8月 23 23:25 2015 slt.tablespace-01.sql
+-rw-r--r--. 1 oracle oinstall   1488  8月 23 01:05 2015 slt.use-rate.sql
+-rw-r--r--. 1 oracle oinstall    198  8月 24 00:01 2015 tmp-mak.ls.data_files.sh.sh
+[m]0;oracle@std:~/prj[oracle@std prj]$ exit
+exit
+
+スクリプトは 2015年08月24日 00時12分30秒
+ に終了しました
